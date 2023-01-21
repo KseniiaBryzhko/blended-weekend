@@ -25,9 +25,9 @@ function checkQuater(num) {
     message = console.log("Ваше число в 3ій чверті.");
   } else if (num >= 46 && num <= 60) {
     message = console.log("Ваше число в 4ій чверті.");
-  }  else (num < 0 || num > 60) {
+  } else {
     message = console.log("Ваше число невірне.");
-    }
+  }
 
   return message;
 }

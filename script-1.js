@@ -25,47 +25,67 @@
 //     message = console.log("Ваше число в 3ій чверті.");
 //   } else if (num >= 46 && num <= 60) {
 //     message = console.log("Ваше число в 4ій чверті.");
+// //   } else {
+// //     message = console.log("Ваше число невірне.");
+// //   }
+
+// //   return message;
+// // }
+
+// // checkQuater(userInfo);
+
+// function checkString() {
+//   const userStr = prompt("Input string");
+//   const userLetter = prompt("Write letter");
+//   const userLetterNum = Number(prompt("Write letter`s number"));
+//   let message;
+//   // console.log(typeof userStr);
+//   // console.log(typeof userLetter);
+//   // console.log(typeof userLetterNum);
+
+//   if (
+//     typeof userStr === "string" &&
+//     typeof userLetter === "string" &&
+//     typeof userLetterNum === "number"
+//   ) {
+//     const arrayStr = userStr.split("");
+
+//     if (!arrayStr.includes(userLetter)) {
+//       message = `There is no such letter`;
+//     } else {
+//       if (userLetterNum <= arrayStr.length) {
+//         if (arrayStr[userLetterNum - 1] === userLetter) {
+//           message = `Your letter ${userLetter} in string ${userStr} on position ${userLetterNum}`;
+//         } else {
+//           message = `Your letter ${userLetter}  doesn't match position ${userLetterNum}`;
+//         }
+//       } else {
+//         message = "Your LetterNum is false";
+//       }
+//     }
 //   } else {
-//     message = console.log("Ваше число невірне.");
+//     message = "Your data is invalid";
 //   }
-
-//   return message;
+//   return console.log(message);
 // }
+// checkString();
 
-// checkQuater(userInfo);
 
-function checkString() {
-  const userStr = prompt("Input string");
-  const userLetter = prompt("Write letter");
-  const userLetterNum = Number(prompt("Write letter`s number"));
-  let message;
-  // console.log(typeof userStr);
-  // console.log(typeof userLetter);
-  // console.log(typeof userLetterNum);
+function countEven() {
+  const maxNam = Number(prompt("Введите max"));
+  const minNam = Number(prompt("Введите min"));
 
-  if (
-    typeof userStr === "string" &&
-    typeof userLetter === "string" &&
-    typeof userLetterNum === "number"
-  ) {
-    const arrayStr = userStr.split("");
-
-    if (!arrayStr.includes(userLetter)) {
-      message = `There is no such letter`;
-    } else {
-      if (userLetterNum <= arrayStr.length) {
-        if (arrayStr[userLetterNum - 1] === userLetter) {
-          message = `Your letter ${userLetter} in string ${userStr} on position ${userLetterNum}`;
-        } else {
-          message = `Your letter ${userLetter}  doesn't match position ${userLetterNum}`;
-        }
-      } else {
-        message = "Your LetterNum is false";
+  if (typeof maxNam === "number" && typeof minNam === "number") {
+    let total;
+    for (let i = minNam; i <= maxNam; i += 1){
+      if (i % 2 !== 0) {
+        continue;
       }
+      total += i;
     }
+    return (console.log(total));
   } else {
-    message = "Your data is invalid";
+    console.log("Your data invalid")
   }
-  return console.log(message);
 }
-checkString();
+countEven();

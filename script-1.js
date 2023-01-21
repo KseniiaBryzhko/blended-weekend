@@ -76,7 +76,7 @@ function countEven() {
   const minNam = Number(prompt("Введите min"));
 
   if (typeof maxNam === "number" && typeof minNam === "number") {
-    let total;
+    let total = 0;
     for (let i = minNam; i <= maxNam; i += 1){
       if (i % 2 !== 0) {
         continue;

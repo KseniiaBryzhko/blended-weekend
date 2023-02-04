@@ -106,35 +106,61 @@
 // //     });
 // console.log(updateData(inputData));
 
-
 //task6
 //порахуйте суму позитивних і негативних значень, та поверніть їх в обʼєкт;
-const nums = [-90, 45, 0, 16, -18, 24, -67, 43]
+// const nums = [-90, 45, 0, 16, -18, 24, -67, 43]
 
-function calcPosNeg(array) { 
-  // const resObject = array.reduce((acc, number) =>
-  return array.reduce((acc, number) => { 
-    if (number > 0) {
-      return {
-        ...acc,
-         pos: acc.pos + number,
-        // neg: acc.neg,
+// function calcPosNeg(array) {
+//   // const resObject = array.reduce((acc, number) =>
+//   return array.reduce((acc, number) => {
+//     if (number > 0) {
+//       return {
+//         ...acc,
+//          pos: acc.pos + number,
+//         // neg: acc.neg,
 
-      }
-    } else {
-      return {
-              ...acc,
-              // pos: acc.pos,
-              neg: acc.neg + number, 
-       }
-  
-    }
-  }, {
-    pos: 0,
-    neg: 0,
+//       }
+//     } else {
+//       return {
+//               ...acc,
+//               // pos: acc.pos,
+//               neg: acc.neg + number,
+//        }
 
-  })
-  
-  // return resObject;
+//     }
+//   }, {
+//     pos: 0,
+//     neg: 0,
+
+//   })
+
+//   // return resObject;
+// }
+// console.log(calcPosNeg(nums));
+
+// Напишіть функцію для перевірки 2х рядків на ідентичність (анаграму)
+function isAnagramma(string1, string2) {
+  if (string1.length !== string2.length) {
+    return false;
+  }
+  if (string1.toLowerCase() === string2.toLowerCase()) {
+    return false;
+  }
+  let firstString = string1.split("").sort().join("");
+  let secondString = string2.split("").sort().join("");
+
+  if (firstString !== secondString) {
+    return false;
+  }
+
+  return true;
 }
-console.log(calcPosNeg(nums));
+const str1 =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo accusantium, nulla itaque alias iure explicabo necessitatibus voluptatibus iusto id culpa quos numquam laboriosam ut optio expedita repellat nam eos sequi sapiente, ratione maiores a omnis suscipit. Quibusdam blanditiis dolores quasi quisquam ipsum? Repellat commodi et exercitationem quidem rerum fugit sed!";
+
+const str2 =
+  "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus adipisci quos ex enim numquam necessitatibus, cum ipsa ab quidem voluptatum! Voluptatibus, nemo nam? Adipisci neque, accusamus aut dolore, natus delectus quisquam ad assumenda debitis repellendus quis ipsam cupiditate quam obcaecati quae totam maiores eveniet enim ex est officiis. Nihil, similique?";
+// console.log(isAnagramma("rang", "gran"));
+// console.log(isAnagramma("rung", "gran"));
+// console.log(isAnagramma("здесь 100 слов", "100 слов здесь"));
+console.log(isAnagramma(str1, str2));

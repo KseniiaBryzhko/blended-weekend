@@ -77,8 +77,32 @@
 // Навісьте слухач за кліком на глобальний об'єкт window і визначте, коли клік відбувається всередині елемента з класом "place", виведіть в консоль повідомлення "Ви клікнули в цільовий елемент". Коли клік припадає поза зоною елемента, виведіть повідомлення "Це не цільовий елемент". Використайте метод contains.
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 
+// window.addEventListener('click', onClick);
+// const place = document.querySelector('.place');
+
+// function onClick(e) {
+//     if (place.contains(e.target)) {
+//         alert('Це є цільовий елемент')
+//     } else { alert('Це не є цільовий елемент')}
+
+// }
+
 //TODO:====================06==========================
 // По кліку на кнопку "Подвоїти" збільшити значення у кожному елементі списку в 2 рази
+
+// const itemsEl = document.querySelectorAll('.js-list-item');
+// const doubleBtnEl = document.querySelector('.js-double-btn');
+
+// doubleBtnEl.addEventListener('click', () => {
+//     itemsEl.forEach((el) => {
+//         const value = Number(el.textContent);
+//         el.textContent = value * 2;
+//         console.log(value);
+//     })
+    
+// })
+
+
 
 //TODO:====================07==========================
 // При кліку на коло воно має слідувати за курсором. При повторному кліку воно стає в початкове положення.

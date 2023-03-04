@@ -35,9 +35,43 @@
 
 //TODO:====================03==========================
 // Кнопка "Приховати" ховає текст і замінює назву кнопки на "Розкрити", у разі повторного натискання текст знову стає доступним і кнопка набуває початкового вигляду.
+// const inputPasswordEl = document.querySelector(".js-password-input");
+// const btnPasswordEl = document.querySelector(".js-password-button");
+// btnPasswordEl.addEventListener("click", showPassword);
+
+// function showPassword() {
+//   if (inputPasswordEl.type === "text") {
+//     inputPasswordEl.type = "password";
+//     btnPasswordEl.textContent = "Розкрити";
+//     return
+//   }
+//   inputPasswordEl.type = "text";
+//   btnPasswordEl.textContent = "Скрити";
+// }
 
 //TODO:====================04==========================
 // Кнопка "Зменшити" робить квадрат меншим на 10 пікселів, кнопка "Збільшити" - робить більшим на 10 пікселів.
+// const boxEl = document.querySelector(".box");
+// const boxDecreaseBtnEl = document.querySelector(".js-decrease");
+// const boxIncreaseBtnEl = document.querySelector(".js-increase");
+// boxDecreaseBtnEl.addEventListener("click", handleBoxChange);
+// boxIncreaseBtnEl.addEventListener("click", handleBoxChange);
+
+// function handleBoxChange(event) {
+//   const { offsetWidth } = boxEl;
+
+//   console.log(offsetWidth);
+//   const idBtn = event.target.id;
+//   console.log(idBtn);
+
+//   if (idBtn === "decrease") {
+//     boxEl.style.width = `${offsetWidth - 10}px`;
+//     boxEl.style.height = `${offsetWidth - 10}px`;
+//     return;
+//   }
+//   boxEl.style.width = `${offsetWidth + 10}px`;
+//   boxEl.style.height = `${offsetWidth + 10}px`;
+// }
 
 //TODO:====================05==========================
 // Навісьте слухач за кліком на глобальний об'єкт window і визначте, коли клік відбувається всередині елемента з класом "place", виведіть в консоль повідомлення "Ви клікнули в цільовий елемент". Коли клік припадає поза зоною елемента, виведіть повідомлення "Це не цільовий елемент". Використайте метод contains.

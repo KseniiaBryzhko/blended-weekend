@@ -1,8 +1,37 @@
 //TODO:====================01==========================
 // Натискання на кновку "SHOW ME" має виводити значення з поля введення в alert
 
+// const inputTextEl = document.querySelector(".js-alert-input");
+// const submitBtnEl = document.querySelector(".js-alert-button");
+
+// const showText = function (event) {
+//   if (inputTextEl.value.trim() === "") return;
+//   alert(inputTextEl.value);
+//   inputTextEl.value = "";
+// };
+
+// submitBtnEl.addEventListener("click", showText);
+
 //TODO:====================02==========================
 // Після натискання на кнопку "SWAP ME" здійснюється обмін вмістом між двома інпутами. Можете натискати на неї кілька разів або вручну змінити вміст інпутів.
+
+// const btnEl = document.querySelector(".js-swap-button");
+// const leftInputEl = document.querySelector(".js-left-swap-input");
+// const rightInputEl = document.querySelector(".js-right-swap-input");
+
+// const replaceInput = function (event) {
+//   const initialValue = leftInputEl.value;
+
+//   if (leftInputEl.value.trim() === "" || rightInputEl.value.trim() === "") {
+//     alert("Wright something!!");
+//     return;
+//   }
+
+//   leftInputEl.value = rightInputEl.value;
+//   rightInputEl.value = initialValue;
+// };
+
+// btnEl.addEventListener("click", replaceInput);
 
 //TODO:====================03==========================
 // Кнопка "Приховати" ховає текст і замінює назву кнопки на "Розкрити", у разі повторного натискання текст знову стає доступним і кнопка набуває початкового вигляду.

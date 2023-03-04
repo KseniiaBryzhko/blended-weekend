@@ -111,8 +111,83 @@
 // https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
 // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 
+// const circleRef = document.querySelector('.outer-circle');
+// const onMouseMove = (event) => {
+//     console.log('move');
+//     let leftTurn = event.pageX;
+//     let topTurn = event.pageY;
+
+//     circleRef.style.top = `${topTurn - 15}px`;
+//     circleRef.style.left = `${leftTurn -15}px`;
+
+// }
+// circleRef.addEventListener('click' , (event) => {
+//     const item = event.currentTarget;
+
+//     if (item.style.position === 'absolute') {
+//         window.removeEventListener('mousemove', onMouseMove);
+
+//         item.style.position = 'static';
+//         return;
+//     } 
+
+//     item.style.position = 'absolute';
+
+//     window.addEventListener('mousemove', onMouseMove);
+// })
+
+
 //TODO:====================08==========================
 // При кліці на кожну з кнопок підсумовуються значення з data-атрибутів. Після натискання на кнопку "Вивести результат" виводиться сума значення, а також статистика з інформацією про те, яка кнопка була натиснута скільки разів.
+
+// const listRef = document.querySelector('.stat-list');
+// const resButtonRef = document.querySelector('.js-result-button');
+// const resSectionRef = document.querySelector('.js-result-section');
+
+// let total = 0;
+// const stat = {};
+
+// const onButtonClick = (event) => { 
+//     if (event.target.nodeName !== 'BUTTON') { 
+//         return;
+//     }
+//     const valueRes = Number(event.target.dataset.number);
+//     const buttonName = event.target.textContent;
+//     console.log(stat);
+
+//     if (!stat[buttonName]) {
+//         stat[buttonName] = 1; // 0 це false;
+//             console.log(stat);
+
+//     } else { 
+//         stat[buttonName] += 1;
+//             console.log(stat);
+
+//     }
+
+//     total += valueRes;
+//     // console.log(event.target);
+
+// }
+
+
+// const onResButtonClick = () => { 
+//     const totalRes = `<p>Total: ${total}</p>`
+
+//     const markup = Object.entries(stat).map((el) => {
+//         // console.log(Object.entries(stat));
+//         return `<li>${el[0]} була натиснута ${el[1]} разів</li>`;
+
+//     }).join('');
+
+//     resSectionRef.insertAdjacentHTML('afterbegin', totalRes + `<ul>${markup}</ul>`);
+// }
+
+// resButtonRef.addEventListener('click', onResButtonClick);
+
+
+// listRef.addEventListener('click', onButtonClick);
+
 
 //TODO:====================09==========================
 // Видаліть зі списку ті елементи, які позначені у чекбоксу.

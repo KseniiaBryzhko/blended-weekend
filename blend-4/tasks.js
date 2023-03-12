@@ -201,6 +201,20 @@ formEl.addEventListener("submit", (e) => {
   }
 });
 */
+// добавлено решение через forEach
+// const checkFormEl = document.querySelector(".js-checkbox-form");
+// const checkEl = document.querySelectorAll(
+//   ".js-checkbox-wrapper > input[type='checkbox']"
+// );
+
+// checkFormEl.addEventListener("submit", (event) =>
+//   checkEl.forEach((elem) => {
+//     event.preventDefault();
+//     if (elem.checked) {
+//       elem.closest(".js-checkbox-wrapper").remove();
+//     }
+//   })
+// );
 
 //TODO:====================10==========================
 // Дано список людей. Зроби можливість сортування списку за іменем і за прізвищем.

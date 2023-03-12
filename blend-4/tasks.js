@@ -99,10 +99,8 @@
 //         el.textContent = value * 2;
 //         console.log(value);
 //     })
-    
+
 // })
-
-
 
 //TODO:====================07==========================
 // При кліку на коло воно має слідувати за курсором. При повторному кліку воно стає в початкове положення.
@@ -129,13 +127,12 @@
 
 //         item.style.position = 'static';
 //         return;
-//     } 
+//     }
 
 //     item.style.position = 'absolute';
 
 //     window.addEventListener('mousemove', onMouseMove);
 // })
-
 
 //TODO:====================08==========================
 // При кліці на кожну з кнопок підсумовуються значення з data-атрибутів. Після натискання на кнопку "Вивести результат" виводиться сума значення, а також статистика з інформацією про те, яка кнопка була натиснута скільки разів.
@@ -147,8 +144,8 @@
 // let total = 0;
 // const stat = {};
 
-// const onButtonClick = (event) => { 
-//     if (event.target.nodeName !== 'BUTTON') { 
+// const onButtonClick = (event) => {
+//     if (event.target.nodeName !== 'BUTTON') {
 //         return;
 //     }
 //     const valueRes = Number(event.target.dataset.number);
@@ -159,7 +156,7 @@
 //         stat[buttonName] = 1; // 0 це false;
 //             console.log(stat);
 
-//     } else { 
+//     } else {
 //         stat[buttonName] += 1;
 //             console.log(stat);
 
@@ -170,8 +167,7 @@
 
 // }
 
-
-// const onResButtonClick = () => { 
+// const onResButtonClick = () => {
 //     const totalRes = `<p>Total: ${total}</p>`
 
 //     const markup = Object.entries(stat).map((el) => {
@@ -185,15 +181,51 @@
 
 // resButtonRef.addEventListener('click', onResButtonClick);
 
-
 // listRef.addEventListener('click', onButtonClick);
 
-
 //TODO:====================09==========================
-// Видаліть зі списку ті елементи, які позначені у чекбоксу.
+//! Видаліть зі списку ті елементи, які позначені у чекбоксу.
+
+/*
+const formEl = document.querySelector(".js-checkbox-form");
+const listEl = document.querySelector(".js-checkbox-list");
+
+formEl.addEventListener("submit", (e) => {
+  const checkboxes = listEl.querySelectorAll('input[type="checkbox"]');
+
+  for (let i = 0; i < checkboxes.length; i += 1) {
+    if (checkboxes[i].checked) {
+      e.preventDefault();
+      checkboxes[i].closest(".js-checkbox-wrapper").remove();
+    }
+  }
+});
+*/
 
 //TODO:====================10==========================
 // Дано список людей. Зроби можливість сортування списку за іменем і за прізвищем.
+/*
+const peopleList = document.querySelector(".js-people");
+const sortByNameBtn = document.querySelector(".js-sort-by-name-btn");
+const sortByLastNameBtn = document.querySelector(".js-sort-by-last-name-btn");
+
+function sortPeopleList(sortField) {
+  const peopleArray = [...peopleList.children];
+
+  peopleArray.sort((a, b) => {
+    const [aName, aLastName] = a.textContent.split(" ");
+    const [bName, bLastName] = b.textContent.split(" ");
+    return sortField === "firstName"
+      ? aName.localeCompare(bName)
+      : aLastName.localeCompare(bLastName);
+  });
+  peopleList.innerHTML = "";
+  peopleArray.forEach((person) => peopleList.appendChild(person));
+}
+
+sortByNameBtn.addEventListener("click", () => sortPeopleList("firstName"));
+sortByLastNameBtn.addEventListener("click", () => sortPeopleList("lastName"));
+*/
 
 //TODO:====================11==========================
 // Даний список людей. Зроби фільтр за ім'ям/прізвищем.

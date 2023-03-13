@@ -202,6 +202,20 @@ formEl.addEventListener("submit", (e) => {
 });
 */
 
+// ще можливий розв'язок
+// const checkFormEl = document.querySelector(".js-checkbox-form");
+// const checkEl = document.querySelectorAll(
+//   ".js-checkbox-wrapper > input[type='checkbox']"
+// );
+
+// checkFormEl.addEventListener("submit", (event) =>
+//   checkEl.forEach((elem) => {
+//     event.preventDefault();
+//     if (elem.checked) {
+//       elem.closest(".js-checkbox-wrapper").remove();
+//     }
+//   })
+// );
 //TODO:====================10==========================
 // Дано список людей. Зроби можливість сортування списку за іменем і за прізвищем.
 /*
@@ -229,7 +243,25 @@ sortByLastNameBtn.addEventListener("click", () => sortPeopleList("lastName"));
 
 //TODO:====================11==========================
 // Даний список людей. Зроби фільтр за ім'ям/прізвищем.
+// const listEl = document.querySelector(".js-contacts");
+// const inputEl = document.querySelector(".js-contacts-filter");
 
+// const nameArr = [...listEl.children].map((el) => el.textContent);
+
+// inputEl.addEventListener("input", handleFilter);
+
+// function handleFilter(event) {
+//   const filter = event.target.value.toLowerCase();
+
+//   const nameArrFilter = nameArr.filter((el) =>
+//     el.toLowerCase().includes(filter)
+//   );
+
+//   listEl.innerHTML = "";
+//   listEl.innerHTML = nameArrFilter
+//     .map((el) => `<li class="contact">${el}</li>`)
+//     .join("");
+// }
 //TODO:====================12==========================
 // Клік по кнопці замінює символ з першого поля введення на символ із другого поля введення в усьому тексті. Якщо одне з полів порожнє, викликай alert із проханням заповнити їх.
 

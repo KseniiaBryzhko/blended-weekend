@@ -381,3 +381,81 @@ sortByLastNameBtn.addEventListener("click", () => sortPeopleList("lastName"));
 // function onMouseOut(event) {
 //   event.target.style.opacity = 1;
 // }
+
+///=---------ISkra
+
+//TODO:====================11==========================
+// Даний список людей. Зроби фільтр за ім'ям/прізвищем.
+
+// const listEl = document.querySelector(".js-contacts");
+// const inputEl = document.querySelector(".js-contacts-filter");
+
+// const nameArr = [...listEl.children].map((el) => el.textContent);
+
+// inputEl.addEventListener("input", handleFilter);
+
+// function handleFilter(event) {
+//   const filter = event.target.value.toLowerCase();
+
+//   const nameArrFilter = nameArr.filter((el) =>
+//     el.toLowerCase().includes(filter)
+//   );
+
+//   listEl.innerHTML = nameArrFilter
+//     .map((el) => `<li class="contact">${el}</li>`)
+//     .join("");
+// }
+//TODO:====================12==========================
+// Клік по кнопці замінює символ з першого поля введення на символ із другого поля введення в усьому тексті. Якщо одне з полів порожнє, викликай alert із проханням заповнити їх.
+// const textEl = document.querySelector(".js-text");
+// const btnReplaceEl = document.querySelector(".replace-btn");
+// const firstInputEl = document.querySelector(".js-first-input");
+// const secondInputEl = document.querySelector(".js-second-input");
+
+// btnReplaceEl.addEventListener("click", handleReplace);
+
+// function handleReplace(event) {
+//   const first = firstInputEl.value;
+//   const second = secondInputEl.value;
+
+//   if (!first || !second) {
+//     alert("Input value");
+//     return;
+//   }
+//   const newText = textEl.textContent
+//     .split("")
+//     .map((el) => {
+//       if (el === first.toLowerCase()) {
+//         return (el = second.toLowerCase());
+//       } else if (el === first.toUpperCase()) {
+//         return (el = second.toUpperCase());
+//       }
+//       return el;
+//     })
+//     .join("");
+//   textEl.textContent = newText;
+//   firstInputEl.value = "";
+//   secondInputEl.value = "";
+// }
+
+//TODO:====================13==========================
+// Коло має зникати під час наведення на нього.При цьому позиція сусідніх кіл повинна залишатися незмінною.
+
+// по клику - появляется или пропадает:
+
+// const gridCircleEl = document.querySelector(".grid");
+
+// gridCircleEl.addEventListener("click", handleCircleHide);
+// const gridCirclebcg = gridCircleEl.classList;
+
+// function handleCircleHide(event) {
+//   if (event.target.nodeName !== "LI") {
+//     return;
+//   }
+
+//   if (event.target.style.opacity !== "0") {
+//     event.target.style.opacity = "0";
+//   } else {
+//     event.target.style.opacity = "1";
+//   }
+// }

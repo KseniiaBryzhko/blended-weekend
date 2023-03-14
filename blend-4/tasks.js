@@ -267,3 +267,117 @@ sortByLastNameBtn.addEventListener("click", () => sortPeopleList("lastName"));
 
 //TODO:====================12==========================
 // Коло має зникати під час наведення на нього.При цьому позиція сусідніх кіл повинна залишатися незмінною.
+
+// Ще спроби)
+
+//TODO:====================09==========================
+// Видаліть зі списку ті елементи, які позначені у чекбоксу.
+
+// const formEl = document.querySelector(".js-checkbox-form");
+// const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// formEl.addEventListener("submit", onFormSubmit);
+// function onFormSubmit(event) {
+//   event.preventDefault();
+//   checkboxes.forEach((checkbox) => {
+//     if (checkbox.checked) {
+//       checkbox.closest(".js-checkbox-wrapper").remove();
+//     }
+//   });
+// }
+
+//TODO:====================10==========================
+// Дано список людей. Зроби можливість сортування списку за іменем і за прізвищем.
+
+// const persons = document.querySelectorAll(".person");
+// const personsList = document.querySelector(".js-people");
+
+// const sortByNameBtn = document.querySelector(".js-sort-by-name-btn");
+// const sortByLastNameBtn = document.querySelector(".js-sort-by-last-name-btn");
+
+// const arrayOfPersons = [];
+
+// persons.forEach((element) => arrayOfPersons.push(element.textContent));
+
+// sortByNameBtn.addEventListener("click", sortByName);
+// function sortByName() {
+//   const name = [...arrayOfPersons].sort((a, b) => a.localeCompare(b));
+//   const newList = name.map((element) => `<li>${element}</li>`).join("");
+//   personsList.innerHTML = newList;
+// }
+
+// sortByLastNameBtn.addEventListener("click", sortByLastName);
+// function sortByLastName() {
+//   const name = [...arrayOfPersons].sort((a, b) =>
+//     a.split(" ")[1].localeCompare(b.split(" ")[1])
+//   );
+//   const newList = name.map((element) => `<li>${element}</li>`).join("");
+//   personsList.innerHTML = newList;
+// }
+
+//TODO:====================11==========================
+// Даний список людей. Зроби фільтр за ім'ям/прізвищем.
+
+// const contacts = document.querySelectorAll(".contact");
+// const contactsList = document.querySelector(".js-contacts");
+
+// const arrayOfContacts = [];
+
+// contacts.forEach((element) => arrayOfContacts.push(element.textContent));
+
+// const inputEl = document.querySelector(".js-contacts-filter");
+// inputEl.addEventListener("input", filterElements);
+
+// function filterElements(event) {
+//   const inputValue = event.target.value.toLowerCase();
+//   const newArray = arrayOfContacts.filter((element) =>
+//     element.toLowerCase().includes(inputValue)
+//   );
+//   const newList = newArray.map((element) => `<li>${element}</li>`).join("");
+//   contactsList.innerHTML = newList;
+// }
+
+//TODO:====================12==========================
+// Клік по кнопці замінює символ з першого поля введення на символ із другого поля введення в усьому тексті. Якщо одне з полів порожнє, викликай alert із проханням заповнити їх.
+
+// const firstInputEl = document.querySelector(".js-first-input");
+// const secondInputEl = document.querySelector(".js-second-input");
+// const replaceBtnEl = document.querySelector(".replace-btn");
+// const textEl = document.querySelector(".js-text");
+
+// replaceBtnEl.addEventListener("click", onReplaceBtnClick);
+
+// function onReplaceBtnClick() {
+//   const firstInputValue = firstInputEl.value;
+//   const secondInputValue = secondInputEl.value;
+//   const text = textEl.textContent;
+
+//   if (!firstInputValue || !secondInputValue) {
+//     alert("Будь ласка, заповніть обидва поля");
+//     return;
+//   }
+
+//   const replacedTextEl = text.replace(
+//     new RegExp(firstInputValue, "gi"),
+//     secondInputValue
+//   );
+
+//   textEl.textContent = replacedTextEl;
+// }
+
+//TODO:====================13==========================
+// Коло має зникати під час наведення на нього.При цьому позиція сусідніх кіл повинна залишатися незмінною.
+
+// const listOfCircles = document.querySelector(".grid");
+// const circles = document.querySelectorAll(".grid-item");
+
+// listOfCircles.addEventListener("mouseover", onMouseOver);
+// listOfCircles.addEventListener("mouseout", onMouseOut);
+
+// function onMouseOver(event) {
+//   event.target.style.opacity = 0;
+// }
+
+// function onMouseOut(event) {
+//   event.target.style.opacity = 1;
+// }

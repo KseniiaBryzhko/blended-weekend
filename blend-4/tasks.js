@@ -264,6 +264,75 @@ sortByLastNameBtn.addEventListener("click", () => sortPeopleList("lastName"));
 // }
 //TODO:====================12==========================
 // Клік по кнопці замінює символ з першого поля введення на символ із другого поля введення в усьому тексті. Якщо одне з полів порожнє, викликай alert із проханням заповнити їх.
+// const textEl = document.querySelector(".js-text");
+// const btnReplaceEl = document.querySelector(".replace-btn");
+// const firstInputEl = document.querySelector(".js-first-input");
+// const secondInputEl = document.querySelector(".js-second-input");
+
+// btnReplaceEl.addEventListener("click", handleReplace);
+
+// function handleReplace(event) {
+//   const first = firstInputEl.value;
+//   const second = secondInputEl.value;
+//   const newText = textEl.textContent
+//     .split("")
+//     .map((el) => {
+//       if (el === first.toLowerCase()) {
+//         return (el = second.toLowerCase());
+//       } else if (el === first.toUpperCase()) {
+//         return (el = second.toUpperCase());
+//       }
+//       return el;
+//     })
+//     .join("");
+//   textEl.textContent = newText;
+//   firstInputEl.value = "";
+//   secondInputEl.value = "";
+// }
 
 //TODO:====================12==========================
 // Коло має зникати під час наведення на нього.При цьому позиція сусідніх кіл повинна залишатися незмінною.
+
+// по клику - появляется или пропадает:
+
+// const gridCircleEl = document.querySelector(".grid");
+
+// gridCircleEl.addEventListener("click", handleCircleHide);
+// const gridCirclebcg = gridCircleEl.classList;
+// let bcg = "";
+// let border = "";
+// function handleCircleHide(event) {
+//   if (event.target.nodeName !== "LI") {
+//     return;
+//   }
+
+//   if (event.target.style.background !== "inherit") {
+//     bcg = event.target.style.background;
+//     border = event.target.style.border;
+//     event.target.style.background = "inherit";
+//     event.target.style.border = "none";
+//     return bcg, border;
+//   } else {
+//     event.target.style.background = bcg;
+//     event.target.style.border = border;
+//   }
+// }
+
+// по наведению мыши пропадает НАДО ДОРАБОТАТЬ СНЯТИЕ СЛУШАТЕЛЯ:
+// const gridCircleEl = document.querySelector(".grid");
+
+// gridCircleEl.addEventListener("mousemove", handleCircleHide);
+
+// function handleCircleHide(event) {
+//   if (event.target.nodeName !== "LI") {
+//     return;
+//   }
+//   console.log(event.target);
+//   if (event.target.style.background === "inherit") {
+//     event.target.style.background = "inherit";
+//     event.target.style.border = "none";
+//     gridCircleEl.removeEventListener("mousemove", handleCircleHide);
+//   } else {
+//     gridCircleEl.addEventListener("mousemove", handleCircleHide);
+//   }
+// }

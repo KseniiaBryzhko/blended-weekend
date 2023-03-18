@@ -89,6 +89,58 @@ const USER_DATA = {
 
 //? Answer
 
+// const formEl = document.querySelector(".js-login-form");
+// const savedDataFromLocalStorage = JSON.parse(
+//   localStorage.getItem(SAVED_LOGIN_DATA)
+// );
+// if (savedDataFromLocalStorage) {
+//   const { email, password } = savedDataFromLocalStorage;
+
+//   formEl.elements.email.value = email;
+//   formEl.elements.password.value = password;
+//   formEl.elements.email.disabled = true;
+//   formEl.elements.password.disabled = true;
+//   formEl.elements.button.textContent = "Logout";
+// }
+
+// formEl.addEventListener("submit", onSubmit);
+
+// function onSubmit(e) {
+//   e.preventDefault();
+//   const { email, password, button } = e.target.elements;
+
+//   if (savedDataFromLocalStorage) {
+//     email.disabled = false;
+//     password.disabled = false;
+//     localStorage.removeItem(SAVED_LOGIN_DATA);
+//     button.textContent = "Login";
+//     formEl.reset();
+//     return;
+//   }
+
+//   console.log(e.target.elements.email);
+
+//   if (!email.value || !password.value) return alert("Введіть дані!");
+//   if (
+//     email.value !== USER_DATA.email ||
+//     password.value !== USER_DATA.password
+//   ) {
+//     return alert("Imposter!");
+//   }
+
+//   const userData = {
+//     email: email.value,
+//     password: password.value,
+//   };
+
+//   localStorage.setItem(SAVED_LOGIN_DATA, JSON.stringify(userData));
+
+//   email.disabled = true;
+//   password.disabled = true;
+
+//   button.textContent = "Logout";
+// }
+
 //TODO:====================04==========================
 
 /**

@@ -5,10 +5,36 @@
  */
 
 function greet() {
-  return 'hello world';
+  return "hello world";
 }
 
 //? Answer
+
+// function greet2() {
+//   new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("hello world"), 2000);
+//     }).then(console.log);
+//   };
+// }
+// greet2();
+
+// function greet2() {
+//   new Promise((res) => {
+//     setTimeout(() => res("hello world"), 2000);
+//   }).then(console.log);
+// }
+// greet2();
+
+// function greet2() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("hello world");
+//     }, 2000);
+//   }).then(console.log);
+// }
+
+// greet2();
 
 //TODO:====================02==========================
 
@@ -21,6 +47,23 @@ function greet() {
  */
 
 //? Answer
+
+// function checkValue(value) {
+//   return new Promise((res, rej) => {
+//     if (!value || isNaN(value)) rej("error");
+//     if (value % 2 === 0) {
+//       setTimeout(() => {
+//         res("even");
+//       }, 1000);
+//     }
+//     setTimeout(() => {
+//       res("odd");
+//     }, 2000);
+//   });
+// }
+
+// const value = prompt("Введіть числове значення!");
+// checkValue(value).then(console.log).catch(console.log);
 
 //TODO:====================03==========================
 
@@ -38,13 +81,65 @@ function greet() {
  * повідомляти про помилку.
  */
 
-const SAVED_LOGIN_DATA = 'SAVED_LOGIN_DATA';
+const SAVED_LOGIN_DATA = "SAVED_LOGIN_DATA";
 const USER_DATA = {
-  email: 'user@mail.com',
-  password: 'secret',
+  email: "user@mail.com",
+  password: "secret",
 };
 
 //? Answer
+
+// const formEl = document.querySelector(".js-login-form");
+// const savedDataFromLocalStorage = JSON.parse(
+//   localStorage.getItem(SAVED_LOGIN_DATA)
+// );
+// if (savedDataFromLocalStorage) {
+//   const { email, password } = savedDataFromLocalStorage;
+
+//   formEl.elements.email.value = email;
+//   formEl.elements.password.value = password;
+//   formEl.elements.email.disabled = true;
+//   formEl.elements.password.disabled = true;
+//   formEl.elements.button.textContent = "Logout";
+// }
+
+// formEl.addEventListener("submit", onSubmit);
+
+// function onSubmit(e) {
+//   e.preventDefault();
+//   const { email, password, button } = e.target.elements;
+
+//   if (savedDataFromLocalStorage) {
+//     email.disabled = false;
+//     password.disabled = false;
+//     localStorage.removeItem(SAVED_LOGIN_DATA);
+//     button.textContent = "Login";
+//     formEl.reset();
+//     return;
+//   }
+
+//   console.log(e.target.elements.email);
+
+//   if (!email.value || !password.value) return alert("Введіть дані!");
+//   if (
+//     email.value !== USER_DATA.email ||
+//     password.value !== USER_DATA.password
+//   ) {
+//     return alert("Imposter!");
+//   }
+
+//   const userData = {
+//     email: email.value,
+//     password: password.value,
+//   };
+
+//   localStorage.setItem(SAVED_LOGIN_DATA, JSON.stringify(userData));
+
+//   email.disabled = true;
+//   password.disabled = true;
+
+//   button.textContent = "Logout";
+// }
 
 //TODO:====================04==========================
 
@@ -54,8 +149,8 @@ const USER_DATA = {
  */
 
 let timer = null;
-const count = document.querySelector('.js-counter-value');
-const buttons = document.querySelectorAll('.js-counter-button');
+const count = document.querySelector(".js-counter-value");
+const buttons = document.querySelectorAll(".js-counter-button");
 
 //? Answer
 
@@ -142,9 +237,9 @@ const getLastData = () =>
  * Список із завданнями має бути доступним після перезавантаження сторінки.
  */
 
-const TASKS_KEY = 'TASKS_KEY';
-const taskForm = document.querySelector('.js-task-form');
-const taskList = document.querySelector('.js-task-list');
+const TASKS_KEY = "TASKS_KEY";
+const taskForm = document.querySelector(".js-task-form");
+const taskList = document.querySelector(".js-task-list");
 
 //? Answer
 

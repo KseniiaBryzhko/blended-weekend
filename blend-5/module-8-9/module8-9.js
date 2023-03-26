@@ -154,6 +154,39 @@ const buttons = document.querySelectorAll(".js-counter-button");
 
 //? Answer
 
+// buttons.forEach((button) => {
+//   button.addEventListener("click", (event) => {
+//     const { action } = event.target.dataset;
+//     clearInterval(timer);
+
+//     if (action === "increment") {
+//       timer = setInterval(() => {
+//         let number = Number(count.textContent);
+//         number += 1;
+//         count.textContent = number;
+//         console.log(number);
+//       }, 1000);
+
+//       return;
+//     }
+
+//     timer = setInterval(() => {
+//       let number = Number(count.textContent);
+//       number -= 1;
+//       count.textContent = number;
+//       console.log(number);
+//     }, 1000);
+//     console.log("hello");
+//   });
+// });
+
+// console.log("1");
+
+// setTimeout(() => {
+//   console.log("asyn");
+// }, 5000);
+
+// console.log("2");
 //TODO:====================05==========================
 
 /**
@@ -166,7 +199,7 @@ const getData = () =>
   new Promise((res) => {
     setTimeout(() => {
       const data = 1;
-      console.log(data);
+      // console.log(data);
       res(data);
     }, 1000);
   });
@@ -175,7 +208,7 @@ const getNewData = () =>
   new Promise((res) => {
     setTimeout(() => {
       const data = 2;
-      console.log(data);
+      // console.log(data);
       res(data);
     }, 1000);
   });
@@ -184,7 +217,7 @@ const getAnotherData = () =>
   new Promise((res) => {
     setTimeout(() => {
       const data = 3;
-      console.log(data);
+      // console.log(data);
       res(data);
     }, 1000);
   });
@@ -193,12 +226,38 @@ const getLastData = () =>
   new Promise((res) => {
     setTimeout(() => {
       const data = 4;
-      console.log(data);
+      // console.log(data);
       res(data);
     }, 1000);
   });
 
 //? Answer
+// const dataArray = [];
+// getData()
+//   .then((data) => {
+//     dataArray.push(data);
+//     return getNewData();
+//   })
+//   .then((data) => {
+//     dataArray.push(data);
+//     return getAnotherData();
+//   })
+//   .then((data) => {
+//     dataArray.push(data);
+//     return getLastData();
+//   })
+//   .then((data) => {
+//     dataArray.push(data);
+//     console.log(dataArray);
+//   });
+
+// const data = await Promise.all([
+//   getData(),
+//   getNewData(),
+//   getAnotherData(),
+//   getLastData(),
+// ]);
+// console.log(data);
 
 //TODO:====================06==========================
 
@@ -210,8 +269,28 @@ const getLastData = () =>
  */
 
 //? Answer
+// function startTimer(array1) {
+//   let index = 0;
+//   let array = [...array1];
+//   let isResolved, timer;
 
-// startTimer(['a', 'b', 'c', 'd', 'e', 'f']);
+//   timer = setInterval(() => {
+//     console.log(array[index]);
+//     console.log(index);
+
+//     if (index === array.length - 1 && !isResolved) {
+//       array.reverse();
+//       index = -1;
+//       isResolved = true;
+//     }
+//     if (index === array.length - 1 && isResolved) {
+//       clearInterval(timer);
+//     }
+//     index += 1;
+//   }, 1000);
+// }
+
+// startTimer(["a", "b", "c", "d", "e", "f"]);
 
 //TODO:====================07==========================
 /**

@@ -303,8 +303,25 @@ const getLastData = () =>
  */
 
 //? Answer
+// const startDelay = 3000;
+// const number = 5;
+// const step = 1000;
 
-// countWithDelay(3000, 5, 1000);
+// function countWithDelay(startDelay, number, step) {
+//   let delay = startDelay;
+
+//   for (let i = 1; i <= number; i += 1) {
+//     setTimeout(() => {
+//       logout(i);
+//     }, delay);
+//     delay += step;
+//   }
+// }
+
+// function logout(quantity) {
+//   console.log("number called: ", quantity);
+// }
+// countWithDelay(startDelay, number, step);
 
 //TODO:====================08==========================
 /**
@@ -323,3 +340,49 @@ const taskList = document.querySelector(".js-task-list");
 //? Answer
 
 //TODO:==============================================
+taskForm.addEventListener("submit", handleAddTask);
+taskList.addEventListener("click", handleRemoveTask);
+let taskArr = [];
+startpage();
+
+function startpage() {
+  if (localStorage.getItem(TASKS_KEY)) {
+    taskArr = JSON.parse(localStorage.getItem(TASKS_KEY));
+    taskArr.forEach((el) => {
+      createTaskList(el);
+    });
+  }
+}
+
+function handleAddTask(event) {
+  event.preventDefault();
+  taskArr.push(event.target.elements.taskName.value);
+  localStorage.setItem(TASKS_KEY, JSON.stringify(taskArr));
+  taskForm.reset();
+  createTaskList(taskArr[taskArr.length - 1]);
+}
+
+function handleRemoveTask(event) {
+  if (event.target.nodeName !== "BUTTON") {
+    return;
+  }
+
+  const removeItem = event.target
+    .closest(".list-item")
+    .firstElementChild.textContent.trim();
+
+  taskArr = taskArr.filter((el) => el.trim() !== removeItem);
+  console.log(taskArr);
+  localStorage.setItem(TASKS_KEY, JSON.stringify(taskArr));
+  event.target.closest(".list-item").remove();
+}
+
+function createTaskList(el) {
+  taskList.insertAdjacentHTML(
+    "beforeend",
+    `<li class= "list-item">
+        <p class= "task-name" data-name> ${el}</p>
+        <button type= "button" class = "button-delete">delete</button>
+      </li>`
+  );
+}
